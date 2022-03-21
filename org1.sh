@@ -33,13 +33,11 @@ fabric-ca-client enroll -d -u http://peer1-org1:peer1-org1pw@0.0.0.0:7054 --csr.
 
 # org1 peer1 在 tls CA enroll
 export FABRIC_CA_CLIENT_MSPDIR=tls-msp
-export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/fabric-ca-test/hyperledger/org1/peer1/assets/tls-ca/tls-ca-cert.pem
+export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/fabric-ca-test/hyperledger/tls/ca/crypto/ca-cert.pem
 export FABRIC_CA_CLIENT_BCCSP_SW_SECURITY=384
 export FABRIC_CA_CLIENT_DEBUG=true
 export FABRIC_CA_CLIENT_BCCSP_SW_HASH=SHA2
-fabric-ca-client enroll -d -u https://peer1-org1:peer1PW@0.0.0.0:7052 --enrollment.profile tls --csr.hosts peer1-org1
-
-
+fabric-ca-client enroll -d -u https://peer1-org1:peer1PW@0.0.0.0:7052 --enrollment.profile tls --csr.hosts peer1-org1 --csr.keyrequest.algo ecdsa --csr.keyrequest.size 384
 
 
 # org1 peer2 在 org1 CA enroll
@@ -52,13 +50,11 @@ fabric-ca-client enroll -d -u http://peer2-org1:peer2-org1pw@0.0.0.0:7054 --csr.
 
 # org1 peer2 在 tls CA enroll
 export FABRIC_CA_CLIENT_MSPDIR=tls-msp
-export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/fabric-ca-test/hyperledger/org1/peer2/assets/tls-ca/tls-ca-cert.pem
+export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/fabric-ca-test/hyperledger/tls/ca/crypto/ca-cert.pem
 export FABRIC_CA_CLIENT_BCCSP_SW_SECURITY=384
 export FABRIC_CA_CLIENT_DEBUG=true
 export FABRIC_CA_CLIENT_BCCSP_SW_HASH=SHA2
-fabric-ca-client enroll -d -u https://peer2-org1:peer2PW@0.0.0.0:7052 --enrollment.profile tls --csr.hosts peer2-org1
-
-
+fabric-ca-client enroll -d -u https://peer2-org1:peer2PW@0.0.0.0:7052 --enrollment.profile tls --csr.hosts peer2-org1  --csr.keyrequest.algo ecdsa --csr.keyrequest.size 384
 
 # org1 admin
 export FABRIC_CA_CLIENT_HOME=$HOME/fabric-ca-test/hyperledger/org1/admin
