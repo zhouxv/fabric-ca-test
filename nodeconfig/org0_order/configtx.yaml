@@ -42,7 +42,7 @@ Organizations:
                 Rule: "OR('OrdererMSP.admin')"
 
         OrdererEndpoints:
-            - 127.0.0.1:8021
+            - localhost:8021
 
     - &Org1
         # DefaultOrg defines the organization which is used in the sampleconfig
@@ -209,12 +209,12 @@ Orderer: &OrdererDefaults
     # as TLS validation.  The preferred way to specify orderer addresses is now
     # to include the OrdererEndpoints item in your org definition
     Addresses:
-        - 127.0.0.1:8021
+        - localhost:8021
 
     # zhouxv
     EtcdRaft:
         Consenters:
-        - Host: 127.0.0.1
+        - Host: localhost
           Port: 8021
           # zhouxv
           ClientTLSCert: ./organizations/org0/msp/tlscacerts/ca-cert.pem

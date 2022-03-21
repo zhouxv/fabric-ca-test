@@ -13,7 +13,7 @@
 ################################################################################
 General:
     # Listen address: The IP on which to bind to listen.
-    ListenAddress: 127.0.0.1
+    ListenAddress: localhost
 
     # Listen port: The port on which to bind to listen.
     # zhouxv
@@ -21,13 +21,13 @@ General:
 
     # TLS: TLS settings for the GRPC server.
     TLS:
-        Enabled: false
+        Enabled: true
         # PrivateKey governs the file location of the private key of the TLS certificate.
-        PrivateKey: tls/server.key
+        PrivateKey: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/keystore/bb45fa2710e4fc04acfb17399287fa0a2db280a09df2d853f48dc0dfa8668e81_sk
         # Certificate governs the file location of the server TLS certificate.
-        Certificate: tls/server.crt
+        Certificate: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/signcerts/cert.pem
         RootCAs:
-          - tls/ca.crt
+          - /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/tlscacerts/tls-0-0-0-0-7052.pem
         ClientAuthRequired: false
         ClientRootCAs:
     # Keepalive settings for the GRPC server.
@@ -91,7 +91,7 @@ General:
     # using configtxgen command with "-outputBlock" option.
     # Defaults to file "genesisblock" (in $FABRIC_CFG_PATH directory) if not specified.
     # zhouxv
-    BootstrapFile:
+    BootstrapFile: ../../node/orderer-org0/genesis.block
 
     # LocalMSPDir is where to find the private crypto material needed by the
     # orderer. It is set relative here as a default for dev environments but
@@ -293,6 +293,7 @@ Debug:
 
     # BroadcastTraceDir when set will cause each request to the Broadcast service
     # for this orderer to be written to a file in this directory
+    #zhouxv
     BroadcastTraceDir:
 
     # DeliverTraceDir when set will cause each request to the Deliver service
@@ -309,18 +310,18 @@ Debug:
 Operations:
     # host and port for the operations server
     # zhouxv
-    ListenAddress: 127.0.0.1:8021
+    ListenAddress: localhost:8021
 
     # TLS configuration for the operations endpoint
     TLS:
         # TLS enabled
-        Enabled: false
+        Enabled: true
 
         # Certificate is the location of the PEM encoded TLS certificate
-        Certificate:
+        Certificate: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/signcerts/cert.pem
 
         # PrivateKey points to the location of the PEM-encoded key
-        PrivateKey:
+        PrivateKey: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/keystore/bb45fa2710e4fc04acfb17399287fa0a2db280a09df2d853f48dc0dfa8668e81_sk
 
         # Most operations service endpoints require client authentication when TLS
         # is enabled. ClientAuthRequired requires client certificate authentication
@@ -347,7 +348,7 @@ Metrics:
       Network: udp
 
       # the statsd server address
-      Address: 127.0.0.1:8125
+      Address: localhost:8125
 
       # The interval at which locally cached counters and gauges are pushed
       # to statsd; timings are pushed immediately

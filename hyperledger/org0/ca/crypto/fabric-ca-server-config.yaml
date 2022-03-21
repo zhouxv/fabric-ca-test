@@ -456,7 +456,7 @@ cfg:
 ###############################################################################
 operations:
     # host and port for the operations server
-    listenAddress: 127.0.0.1:9053
+    listenAddress: localhost:9053
 
     # TLS configuration for the operations endpoint
     tls:
@@ -493,7 +493,7 @@ metrics:
         network: udp
 
         # statsd server address
-        address: 127.0.0.1:8125
+        address: localhost:8125
 
         # the interval at which locally cached counters and gauges are pushed
         # to statsd; timings are pushed immediately

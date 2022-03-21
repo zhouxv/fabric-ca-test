@@ -23,13 +23,13 @@ peer:
     # The Address at local network interface this Peer will listen on.
     # By default, it will listen on all network interfaces
     # zhouxv
-    listenAddress: 127.0.0.1:8015
+    listenAddress: localhost:8015
 
     # The endpoint this peer uses to listen for inbound chaincode connections.
     # If this is commented-out, the listen address is selected to be
     # the peer's address (see below) with port 7052
     # zhouxv
-    chaincodeListenAddress: 127.0.0.1:8016
+    chaincodeListenAddress: localhost:8016
 
     # The endpoint the chaincode for this peer uses to connect to the peer.
     # If this is not specified, the chaincodeListenAddress address is selected.
@@ -38,7 +38,7 @@ peer:
     # will fallback to the auto detected IP (local IP) regardless of the peer
     # addressAutoDetect value.
     # zhouxv
-    chaincodeAddress: 127.0.0.1:8016
+    chaincodeAddress: localhost:8016
 
     # When used as peer config, this represents the endpoint to other peers
     # in the same organization. For peers in other organization, see
@@ -46,7 +46,7 @@ peer:
     # When used as CLI config, this means the peer's endpoint to interact with
 
     # zhouxv
-    address: 127.0.0.1:8015
+    address: localhost:8015
 
     # Whether the Peer should programmatically determine its address
     # This case is useful for docker containers.
@@ -94,7 +94,7 @@ peer:
         # organization, because the peer would refuse connecting to these endpoints
         # unless they are in the same organization as the peer.
         # zhouxv
-        bootstrap: 127.0.0.1:8015
+        bootstrap: localhost:8015
 
         # NOTE: orgLeader and useLeaderElection parameters are mutual exclusive.
         # Setting both to true would result in the termination of the peer
@@ -307,7 +307,7 @@ peer:
     # location must be access control protected to prevent unintended
     # modification that might corrupt the peer operations.
     # zhouxv
-    fileSystemPath: ../node/peer2-org2
+    fileSystemPath: ../../node/peer2-org2
 
     # BCCSP (Blockchain crypto provider): Select which crypto implementation or
     # library to use
@@ -389,7 +389,7 @@ peer:
     # production, it should be disabled (eg enabled: false)
     profile:
         enabled:     false
-        listenAddress: 127.0.0.1:6060
+        listenAddress: localhost:6060
 
     # Handlers defines custom handlers that can filter and mutate
     # objects passing within the peer, such as:
@@ -655,7 +655,7 @@ ledger:
        # not map the CouchDB container port to a server port in docker-compose.
        # Otherwise proper security must be provided on the connection between
        # CouchDB client (on the peer) and server.
-       couchDBAddress: 127.0.0.1:8019
+       couchDBAddress: localhost:8019
        # This username must have read and write authority on CouchDB
        username:
        # The password is recommended to pass as an environment variable
@@ -729,7 +729,7 @@ ledger:
 operations:
     # host and port for the operations server
     # zhouxv
-    listenAddress: 127.0.0.1:8019
+    listenAddress: localhost:8019
 
     # TLS configuration for the operations endpoint
     # zhoux
@@ -769,7 +769,7 @@ metrics:
         network: udp
 
         # statsd server address
-        address: 127.0.0.1:8125
+        address: localhost:8125
 
         # the interval at which locally cached counters and gauges are pushed
         # to statsd; timings are pushed immediately
