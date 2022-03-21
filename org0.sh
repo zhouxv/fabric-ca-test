@@ -35,7 +35,7 @@ export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/fabric-ca-test/hyperledger/tls/ca/cr
 export FABRIC_CA_CLIENT_BCCSP_SW_SECURITY=384
 export FABRIC_CA_CLIENT_DEBUG=true
 export FABRIC_CA_CLIENT_BCCSP_SW_HASH=SHA2
-fabric-ca-client enroll -d -u https://orderer1-org0:ordererPW@0.0.0.0:7052 --enrollment.profile tls --csr.hosts orderer1-org0 --csr.keyrequest.algo ecdsa --csr.keyrequest.size 384
+fabric-ca-client enroll -d -u https://orderer1-org0:ordererPW@0.0.0.0:7052 --enrollment.profile tls --csr.hosts localhost --csr.keyrequest.algo ecdsa --csr.keyrequest.size 384
 
 
 # org0 admin

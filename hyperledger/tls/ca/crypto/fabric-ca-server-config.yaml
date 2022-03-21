@@ -456,7 +456,7 @@ cfg:
 ###############################################################################
 operations:
     # host and port for the operations server
-    listenAddress: localhost:9443
+    listenAddress: localhost:9052
 
     # TLS configuration for the operations endpoint
     tls:
