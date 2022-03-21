@@ -16,7 +16,8 @@ General:
     ListenAddress: 127.0.0.1
 
     # Listen port: The port on which to bind to listen.
-    ListenPort: 8000
+    # zhouxv
+    ListenPort: 8020
 
     # TLS: TLS settings for the GRPC server.
     TLS:
@@ -89,22 +90,26 @@ General:
     # Generate a genesis block by updating $FABRIC_CFG_PATH/configtx.yaml and
     # using configtxgen command with "-outputBlock" option.
     # Defaults to file "genesisblock" (in $FABRIC_CFG_PATH directory) if not specified.
+    # zhouxv
     BootstrapFile:
 
     # LocalMSPDir is where to find the private crypto material needed by the
     # orderer. It is set relative here as a default for dev environments but
     # should be changed to the real location in production.
-    LocalMSPDir: msp
+    # zhouxv
+    LocalMSPDir: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/msp
 
     # LocalMSPID is the identity to register the local MSP material with the MSP
     # manager. IMPORTANT: The local MSP ID of an orderer needs to match the MSP
     # ID of one of the organizations defined in the orderer system channel's
     # /Channel/Orderer configuration. The sample organization defined in the
     # sample configuration provided has an MSP ID of "SampleOrg".
-    LocalMSPID: SampleOrg
+    # zhouxv
+    LocalMSPID: orderOrg0
 
     # Enable an HTTP service for Go "pprof" profiling as documented at:
     # https://golang.org/pkg/net/http/pprof
+    # zhouxv
     Profile:
         Enabled: false
         Address: 0.0.0.0:6060
@@ -124,8 +129,9 @@ General:
             # TODO: The default Hash and Security level needs refactoring to be
             # fully configurable. Changing these defaults requires coordination
             # SHA2 is hardcoded in several places, not only BCCSP
+            # zhouxv
             Hash: SHA2
-            Security: 256
+            Security: 384
             # Location of key store. If this is unset, a location will be
             # chosen using: 'LocalMSPDir'/keystore
             FileKeyStore:
@@ -164,7 +170,8 @@ FileLedger:
     # Location: The directory to store the blocks in.
     # NOTE: If this is unset, a new temporary location will be chosen every time
     # the orderer is restarted, using the prefix specified by Prefix.
-    Location: /var/hyperledger/production/orderer
+    # zhouxv
+    Location: ../../node/orderer-org0
 
     # The prefix to use when generating a ledger directory in temporary space.
     # Otherwise, this value is ignored.
@@ -301,7 +308,8 @@ Debug:
 ################################################################################
 Operations:
     # host and port for the operations server
-    ListenAddress: 127.0.0.1:8443
+    # zhouxv
+    ListenAddress: 127.0.0.1:8021
 
     # TLS configuration for the operations endpoint
     TLS:
@@ -363,8 +371,10 @@ Consensus:
 
     # WALDir specifies the location at which Write Ahead Logs for etcd/raft are
     # stored. Each channel will have its own subdir named after channel ID.
-    WALDir: /var/hyperledger/production/orderer/etcdraft/wal
+    # zhouxv
+    WALDir: ../../node/orderer-org0/etcdraft/wal
 
     # SnapDir specifies the location at which snapshots for etcd/raft are
     # stored. Each channel will have its own subdir named after channel ID.
-    SnapDir: /var/hyperledger/production/orderer/etcdraft/snapshot
+    # zhouxv
+    SnapDir: ../../node/orderer-org0/etcdraft/snapshot
