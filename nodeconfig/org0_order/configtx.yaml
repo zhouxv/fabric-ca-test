@@ -216,10 +216,9 @@ Orderer: &OrdererDefaults
         Consenters:
         - Host: localhost
           Port: 8021
-          # zhouxv
-          ClientTLSCert: ./organizations/org0/msp/tlscacerts/ca-cert.pem
-          ServerTLSCert: ./organizations/org0/msp/tlscacerts/ca-cert.pem
-
+          ClientTLSCert: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/signcerts/cert.pem
+          ServerTLSCert: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/signcerts/cert.pem
+          
     # Batch Timeout: The amount of time to wait before creating a batch
     BatchTimeout: 2s
 

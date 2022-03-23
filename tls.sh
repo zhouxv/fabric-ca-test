@@ -13,7 +13,7 @@ fabric-ca-server start -b tls-ca-admin:tls-ca-adminpw --csr.keyrequest.algo ecds
 
 
 # tls-ca admin
-export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/fabric-ca-test/hyperledger/tls/ca/crypto/ca-cert.pem
+export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/fabric-ca-test/hyperledger/tls/ca/crypto/tls-cert.pem
 export FABRIC_CA_CLIENT_HOME=$HOME/fabric-ca-test/hyperledger/tls/ca/admin
 export FABRIC_CA_CLIENT_DEBUG=true
 export FABRIC_CA_CLIENT_BCCSP_SW_HASH=SHA2

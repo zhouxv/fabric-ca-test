@@ -23,7 +23,7 @@ General:
     TLS:
         Enabled: true
         # PrivateKey governs the file location of the private key of the TLS certificate.
-        PrivateKey: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/keystore/bb45fa2710e4fc04acfb17399287fa0a2db280a09df2d853f48dc0dfa8668e81_sk
+        PrivateKey: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/keystore/d9a902ec44fca1c214c038ab18afb9beede78ee4d0d310ba2871c3e3e01d864f_sk
         # Certificate governs the file location of the server TLS certificate.
         Certificate: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/signcerts/cert.pem
         RootCAs:
@@ -310,8 +310,8 @@ Debug:
 Operations:
     # host and port for the operations server
     # zhouxv
-    ListenAddress: localhost:8021
 
+    ListenAddress: localhost:8021
     # TLS configuration for the operations endpoint
     TLS:
         # TLS enabled
@@ -321,7 +321,7 @@ Operations:
         Certificate: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/signcerts/cert.pem
 
         # PrivateKey points to the location of the PEM-encoded key
-        PrivateKey: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/keystore/bb45fa2710e4fc04acfb17399287fa0a2db280a09df2d853f48dc0dfa8668e81_sk
+        PrivateKey: /home/dinglab-dell/fabric-ca-test/hyperledger/org0/orderer/tls-msp/keystore/d9a902ec44fca1c214c038ab18afb9beede78ee4d0d310ba2871c3e3e01d864f_sk
 
         # Most operations service endpoints require client authentication when TLS
         # is enabled. ClientAuthRequired requires client certificate authentication
@@ -373,9 +373,9 @@ Consensus:
     # WALDir specifies the location at which Write Ahead Logs for etcd/raft are
     # stored. Each channel will have its own subdir named after channel ID.
     # zhouxv
-    WALDir: ../../node/orderer-org0/etcdraft/wal
+    WALDir: /home/dinglab-dell/fabric-ca-test/node/orderer-org0/etcdraft/wal
 
     # SnapDir specifies the location at which snapshots for etcd/raft are
     # stored. Each channel will have its own subdir named after channel ID.
     # zhouxv
-    SnapDir: ../../node/orderer-org0/etcdraft/snapshot
+    SnapDir: /home/dinglab-dell/fabric-ca-test/node/orderer-org0/etcdraft/snapshot

@@ -31,7 +31,7 @@ fabric-ca-client enroll -d -u http://orderer-org0:orderer-org0pw@0.0.0.0:7053 --
 
 # org0 orderer 在 tls CA enroll
 export FABRIC_CA_CLIENT_MSPDIR=tls-msp
-export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/fabric-ca-test/hyperledger/tls/ca/crypto/ca-cert.pem
+export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/fabric-ca-test/hyperledger/tls/ca/crypto/tls-cert.pem
 export FABRIC_CA_CLIENT_BCCSP_SW_SECURITY=384
 export FABRIC_CA_CLIENT_DEBUG=true
 export FABRIC_CA_CLIENT_BCCSP_SW_HASH=SHA2

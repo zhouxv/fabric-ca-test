@@ -307,7 +307,7 @@ peer:
     # location must be access control protected to prevent unintended
     # modification that might corrupt the peer operations.
     # zhouxv
-    fileSystemPath: ../../node/peer1-org1
+    fileSystemPath: ../../node/peer2-org1
 
     # BCCSP (Blockchain crypto provider): Select which crypto implementation or
     # library to use
