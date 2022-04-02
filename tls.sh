@@ -1,5 +1,5 @@
 # tls-ca server
-export FABRIC_CA_SERVER_HOME=$HOME/fabric-ca-test/hyperledger/tls/ca/crypto
+export FABRIC_CA_SERVER_HOME=$HOME/go-workspace/fabric-ca-test/hyperledger/tls/ca/crypto
 export FABRIC_CA_SERVER_CA_NAME=ca-tls
 export FABRIC_CA_SERVER_CSR_CN=ca-tls
 export FABRIC_CA_SERVER_PORT=7052
@@ -13,8 +13,8 @@ fabric-ca-server start -b tls-ca-admin:tls-ca-adminpw --csr.keyrequest.algo ecds
 
 
 # tls-ca admin
-export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/fabric-ca-test/hyperledger/tls/ca/crypto/tls-cert.pem
-export FABRIC_CA_CLIENT_HOME=$HOME/fabric-ca-test/hyperledger/tls/ca/admin
+export FABRIC_CA_CLIENT_TLS_CERTFILES=$HOME/go-workspace/fabric-ca-test/hyperledger/tls/ca/crypto/tls-cert.pem
+export FABRIC_CA_CLIENT_HOME=$HOME/go-workspace/fabric-ca-test/hyperledger/tls/ca/admin
 export FABRIC_CA_CLIENT_DEBUG=true
 export FABRIC_CA_CLIENT_BCCSP_SW_HASH=SHA2
 export FABRIC_CA_CLIENT_BCCSP_SW_SECURITY=384

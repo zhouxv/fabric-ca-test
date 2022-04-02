@@ -338,7 +338,7 @@ peer:
 
     # Path on the file system where peer will find MSP local configurations
     # zhouxv
-    mspConfigPath: /home/dinglab-dell/fabric-ca-test/hyperledger/org1/peer1/msp
+    mspConfigPath: /home/dinglab-dell/go-workspace/fabric-ca-test/hyperledger/org1/peer1/msp
 
     # Identifier of the local MSP
     # ----!!!!IMPORTANT!!!-!!!IMPORTANT!!!-!!!IMPORTANT!!!!----

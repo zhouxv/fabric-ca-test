@@ -1,5 +1,5 @@
 # org1-ca server
-export FABRIC_CA_SERVER_HOME=$HOME/fabric-ca-test/hyperledger/org1/ca/crypto
+export FABRIC_CA_SERVER_HOME=$HOME/go-workspace/fabric-ca-test/hyperledger/org1/ca/crypto
 export FABRIC_CA_SERVER_CA_NAME=org1-ca
 export FABRIC_CA_SERVER_CSR_CN=org1-ca
 export FABRIC_CA_SERVER_PORT=7054

@@ -1,5 +1,5 @@
 # tls-ca server
-export FABRIC_CA_SERVER_HOME=$HOME/fabric-ca-test/hyperledger/tls/ca/crypto
+export FABRIC_CA_SERVER_HOME=$HOME/go-workspace/fabric-ca-test/hyperledger/tls/ca/crypto
 export FABRIC_CA_SERVER_CA_NAME=ca-tls
 export FABRIC_CA_SERVER_CSR_CN=ca-tls
 export FABRIC_CA_SERVER_PORT=7052
